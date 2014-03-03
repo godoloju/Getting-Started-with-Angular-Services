@@ -11,8 +11,4 @@ angular.module('myApp.services', []).
 //Services Module
 var app = angular.module('asdf', []);
 // Service definition
-app.service('testService', function(){
-    this.sayHello= function(text){
-        return "Service says \"Hello " + text + "\"";
-    };        
-});
+app.value('testService', "Hello value service");
