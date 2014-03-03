@@ -14,7 +14,7 @@ var app = angular.module('asdf', []);
 app.factory('testService', function(){
     return {
     	sayHello : function(text){
-        	return "Facory Object says \"Hello " + text + "\"";
+        	return "Factory Object says \"Hello " + text + "\"";
     	}
     };
 });
