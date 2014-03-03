@@ -15,6 +15,6 @@ app.factory('testService', function(){
     return {
     	sayHello : function(text){
         	return "Facory Object says \"Hello " + text + "\"";
-    	};
+    	}
     };
 });
