@@ -9,3 +9,11 @@ angular.module('myApp.controllers', []).
   .controller('MyCtrl2', [function() {
 
   }]);
+
+  angular.module('myApp.controllers', ['asdf']).
+    controller('MyCtrl1', ['testService', function(testService) {
+      alert(testService.sayHello("World"));
+  	}]).
+    controller('MyCtrl2', [function() {
+    	
+	}]);

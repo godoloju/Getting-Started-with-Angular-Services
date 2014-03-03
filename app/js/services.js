@@ -7,3 +7,12 @@
 // In this case it is a simple value service.
 angular.module('myApp.services', []).
   value('version', '0.1');
+
+//Services Module
+var app = angular.module('asdf', []);
+// Service definition
+app.service('testService', function(){
+    this.sayHello= function(text){
+        return "Service says \"Hello " + text + "\"";
+    };        
+});
