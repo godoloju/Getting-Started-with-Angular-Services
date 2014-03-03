@@ -11,4 +11,10 @@ angular.module('myApp.services', []).
 //Services Module
 var app = angular.module('asdf', []);
 // Service definition
-app.value('testService', "Hello value service");
+app.factory('testService', function(){
+    return {
+    	sayHello : function(text){
+        	return "Facory Object says \"Hello " + text + "\"";
+    	};
+    };
+});
