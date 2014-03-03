@@ -4,7 +4,8 @@
 
 angular.module('myApp.controllers', ['asdf']).
 	controller('MyCtrl1', ['testService', function(testService) {
-		console.dir(testService.sayHello("World"));
+		var helloWorld = new testService('Not World');
+		console.dir(helloWorld.sayHello());
 	}]).
 	controller('MyCtrl2', [function() {
 

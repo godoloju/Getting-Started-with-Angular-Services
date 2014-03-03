@@ -11,10 +11,27 @@ angular.module('myApp.services', []).
 //Services Module
 var app = angular.module('asdf', []);
 // Service definition
-app.factory('testService', function(){
-    return {
-    	sayHello : function(text){
-        	return "Factory Object says \"Hello " + text + "\"";
-    	}
-    };
+app.provider('testService', function () {
+  var text = "Not World";
+  this.setText = function(t){
+    text = t;
+  }
+
+  var HelloWorldClass = function(t){
+  	this.text = t;
+    this.sayHello = function () {
+      return "Provider Service Object says \"Hello " + text + "\"";
+    }
+  }
+
+  this.$get = function() {
+    return HelloWorldClass;
+  };
 });
+
+//app.config(function(testService){
+//  testService.setText("Configure World");
+//});
+//------------------
+//var helloWorld = new testService('Not World');
+//helloWorld.sayHello();
