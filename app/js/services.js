@@ -20,7 +20,7 @@ app.provider('testService', function () {
   var HelloWorldClass = function(t){
   	this.text = t;
     this.sayHello = function () {
-      return "Provider Service Object says \"Hello " + text + "\"";
+      return "Provider Service Object says \"Hello " + this.text + "\"";
     }
   }
 
