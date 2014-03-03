@@ -12,10 +12,10 @@ angular.module('myApp.services', []).
 var app = angular.module('asdf', []);
 // Service definition
 app.provider('testService', function () {
-  var text = "Not World";
-  this.setText = function(t){
-    text = t;
-  }
+  //var text = "Not World";
+  //this.setText = function(t){
+  //  text = t;
+  //}
 
   var HelloWorldClass = function(t){
   	this.text = t;
